@@ -6,9 +6,9 @@ class Usuario(BaseModel):
     id: Optional[str] = None
     nome: str
     telefone: str
-    meus_produtos: List[Produto]
-    meus_pedidos: List[Pedido]
-    minhas_vendas: List[Pedido]
+    meus_produtos: List['Produto']
+    meus_pedidos: List['Pedido']
+    minhas_vendas: List['Pedido'pip]
     
     
 class Produto(BaseModel):
@@ -22,7 +22,7 @@ class Produto(BaseModel):
     
 class Pedido(BaseModel):
     id: Optional[str] = None
-    usuaio: Usuario
+    usuario: Usuario
     produto: Produto
     quantidade: int
     entrega: bool = True
