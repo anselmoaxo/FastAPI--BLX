@@ -26,6 +26,18 @@ def listar_produtos(db: Session = Depends(get_db)):
     produtos = RepositorioProduto(db).listar()
     return produtos
 
+    
+@app.get('/produtos/{produto_id}')
+def obter_produto(produto_id: int, db: Session = Depends(get_db)):
+    produto = RepositorioProduto(db).obter(produto_id)
+    return produto
+
+
+@app.delete('/produtos/{produto_id}')
+def remover_produto(produto_id: int, db: Session = Depends(get_db)):
+    RepositorioProduto(db).remover(produto_id)
+    return {'mensagem': f'Exclusão realizada do ID: {produto_id} '}
+
 
 @app.post('/usuarios')
 def criar_usuarios(usuario: Usuario, db: Session = Depends(get_db)):

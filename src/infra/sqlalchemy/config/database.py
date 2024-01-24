@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 # Define a URL do banco de dados. Atualmente, está configurado para usar um banco de dados SQLite.
 # Se desejar usar PostgreSQL, a linha comentada abaixo pode ser descomentada.
 #SQLALCHEMY_DATABASE_URL = "sqlite:///./app_blx.db"
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/app_blx"
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:postgres@localhost:5433/app_blx"
 
 # Cria uma instância de motor (engine) do SQLAlchemy, que representa a conexão com o banco de dados.
 # O argumento `check_same_thread=False` é utilizado quando se usa SQLite para evitar problemas de concorrência.
