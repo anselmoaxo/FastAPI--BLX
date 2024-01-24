@@ -12,10 +12,12 @@ app = FastAPI()
 @app.post('/produtos')
 def criar_produtos(produto: Produto, db: Session = Depends(get_db)):
     try:
-        produto_criado = RepositorioProduto.criar(produto, db)
+        
+        produto_criado = RepositorioProduto().criar(db, produto)
         return produto_criado
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+        
 
 
 @app.get('/produtos')
