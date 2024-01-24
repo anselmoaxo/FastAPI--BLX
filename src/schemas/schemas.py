@@ -21,7 +21,7 @@ class Produto(BaseModel):
         
 class Pedido(BaseModel):
     id: Optional[str] = None
-    usuario: Usuario
+    #usuario: Usuario
     #produto: Produto
     quantidade: int
     entrega: bool = True

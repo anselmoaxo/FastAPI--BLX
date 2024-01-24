@@ -25,7 +25,6 @@ Base = declarative_base()
 def criar_bd():
     try:
         Base.metadata.create_all(bind=engine)
-        print("Tabelas do banco de dados criadas com sucesso!")
     except Exception as e:
         print(f"Erro ao criar tabelas do banco de dados: {e}")
     
