@@ -18,6 +18,6 @@ O BLX é uma API que permite a criação, leitura, atualização e exclusão de 
    pip install -r requirements.txt
 
 3.Arquitetura Backend
-   ```bash
+   
 ![image](https://github.com/anselmoaxo/FastAPI--BLX/assets/126602910/bfdd3d18-a741-44ed-8cd7-c7924756bbc5)
 
