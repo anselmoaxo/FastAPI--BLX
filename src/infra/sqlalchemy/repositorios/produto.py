@@ -1,9 +1,6 @@
 from sqlalchemy.orm import Session
 from src.schemas import schemas
 from src.infra.sqlalchemy.models import models
-from sqlalchemy import select
-from fastapi import HTTPException
-from sqlalchemy.orm.exc import NoResultFound
 
 
 class RepositorioProduto():
@@ -16,10 +13,13 @@ class RepositorioProduto():
                                     nome=produto.nome,  
                                     detalhe=produto.detalhe,
                                     preco=produto.preco, 
-                                    disponivel=produto.disponivel)
+                                    disponivel=produto.disponivel,
+                                    desconto=produto.desconto,
+                                    id_usuario=produto.id_usuario)
             
         self.db.add(db_produto)
         self.db.commit()   
+        self.db.refresh(db_produto)
         return db_produto
 
     def listar(self):
