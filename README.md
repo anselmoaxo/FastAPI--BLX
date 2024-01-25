@@ -14,7 +14,7 @@ O BLX é uma API que permite a criação, leitura, atualização e exclusão de 
    cd FastAPI--BLX
    
 2. **Instalar Dependências:**
-```bash
-pip install -r requirements.txt
-Configurar o Banco de Dados:
+   ```bash
+   pip install -r requirements.txt
+
 
